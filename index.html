@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,20 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../TriviaGame/assets/css/style.css" />
     <script src="../TriviaGame/assets/javascript/app.js"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="title">
+            <h1>US State Capital Trivial Game</h1>
+            <h3>Click Start to Begin... You have 30 seconds to complete</h3>
+            <button id="startBtn">Start</button>
+        </div>
+        <hr>
+        <br>
+
+        <div id="clock"></div>
+    </div>
+
 
 
 
@@ -20,20 +33,17 @@
         let timerId = setInterval(coundown, 1000);
 
         function countDown() {
-            if(timeLeft === 0) {
+            if (timeLeft === 0) {
                 clearTimeout(timerId);
                 //display the results
-                doSomething();
-            }else {
+                $('#clock').html(timeLeft); 
+            } else {
                 clockElement.html = timeLeft + ' sedonds remaining';
-                timeLeft --;
+                timeLeft--;
             }
 
         }
-
-
-
-
     </script>
 </body>
+
 </html>
