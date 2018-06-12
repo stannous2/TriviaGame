@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../TriviaGame/assets/css/style.css" />
+    <script src="../TriviaGame/assets/javascript/app.js"></script>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        let timeLeft = 30;
+        let clockElement = $('#clock').html();
+        let timerId = setInterval(coundown, 1000);
+
+        function countDown() {
+            if(timeLeft === 0) {
+                clearTimeout(timerId);
+                //display the results
+                doSomething();
+            }else {
+                clockElement.html = timeLeft + ' sedonds remaining';
+                timeLeft --;
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>
