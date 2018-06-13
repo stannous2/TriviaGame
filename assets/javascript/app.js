@@ -1,2 +1,2 @@
-let timeLeft = 30;
-let clockElement = $('')
+// let timeLeft = 30;
+// let clockElement = $('')
