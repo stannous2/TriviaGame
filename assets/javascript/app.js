@@ -2,11 +2,8 @@
 const myQuestions = [
     {
       question: "What is the population in millions of state Ohio?",
-      answers: {
-        a: "2",
-        b: "10",
-        c: "35"
-      },
+      answers: ["a: 2", "b: 10", "c: 35"],
+
       correctAnswer: "b"
     }
     // ,
@@ -42,7 +39,8 @@ let timeLeft = 5;
 let clockElement = $('#clock');
 let playButton = $('#playBtn');
 let myTimer = 0;
-let questionsDiv = $('#questions')
+let questionsDiv = $('#questions');
+let choicesDiv = $('#choices');
 
 startGame();
 
@@ -75,10 +73,13 @@ function startGame() {
 function showQuestions(){
     for(i = 0; i < myQuestions.length; i++){
         questionsDiv.append(myQuestions[i].question);
+        console.log('question - ' + myQuestions[i].question)
+
+        for (j = 0; j < myQuestions[i].answers.length; j++) {
+        	choicesDiv.append(myQuestions[i].answers[j] + '  ');
+        	console.log('answers - ' + myQuestions[i].answers[j])
+        }
         
-        questionsDiv.append(myQuestions[i].answers.a);
-        questionsDiv.append(myQuestions[i].answers.b);
-        questionsDiv.append(myQuestions[i].answers.c);
     }
     
     
