@@ -11,22 +11,28 @@
     height: 150px;
     text-align: center;
 }
-#startBtn {
+.start-bar {
+    display: flex;
+}
+#playBtn {
     background-color: blue;
     color: white;
     width: 200px;
-    height: 50px;
-    font-size: 25px;
+    height: 30px;
+    font-size: 15px;
 }
 
 #clock {
-    background-color: aqua;
     margin: auto;
-    width: 150px;
-    height: 50px;
-    font-size: 25px;
     color: black;
+    text-align: center;
 
+}
+#questions {
+    margin-bottom: 20px;
+    background-color: aqua;
+    width: 100%;
+    height: 400px;
 }
 
 

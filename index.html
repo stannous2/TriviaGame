@@ -8,73 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../TriviaGame/assets/css/style.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-    <script src="../TriviaGame/assets/javascript/app.js"></script>
-
 </head>
 
 <body>
     <div class="container">
         <div class="title">
-            <h1>US State Capital Trivial Game</h1>
-            <h3>Click Start to Begin... You have 30 seconds to complete</h3>
-            <button id="startBtn">Start</button>
+            <h1>US State Population Trivial Game</h1>
+            <h3>Click Play to start.  You have 30 seconds to complete</h3>
+            <h4 id="clock"></h4>
+            <br>
+            <button type="button" id="playBtn">Play</button>
         </div>
-        <hr>
-        <br>
+            
+        <div id="questions"></div>
 
-        <div id="clock"></div>
+        <div id="choices"></div>
+        
+
+        
     </div>
 
 
 
-
-
-    <script>
-        let timeLeft = 30;
-        let clockElement = $('#clock').html();
-        let timerId = setInterval(counDown, 1000);
-
-
-
-        $('document').ready(function(){
-
-            countDown();
-        })
-
-        function countDown() {
-            if (timeLeft === 0) {
-                clearTimeout(timerId);
-                //display the results
-                $('#clock').html(timeLeft); 
-            } else {
-                clockElement.html = timeLeft + ' sedonds remaining';
-                timeLeft--;
-            }
-
-
-
-        }
-
-        
-    
-function myTimer() {
-    //var d = new Date();
-    if(d === 0)
-    {
-        alert('time is up')
-    }
-    else {
-      document.getElementById("demo").innerHTML = d;
-      d--
-     }
-}
-
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../TriviaGame/assets/javascript/app.js"></script>
 
 </body>
+
 </html>
-    </script>
+</script>
 </body>
 
 </html>
