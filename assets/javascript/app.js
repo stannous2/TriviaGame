@@ -40,7 +40,7 @@ let clockElement = $('#clock');
 let playButton = $('#playBtn');
 let myTimer = 0;
 let questionsDiv = $('#questions');
-let choicesDiv = $('#choices');
+let answersDiv = $('#answers');
 
 startGame();
 
@@ -56,6 +56,8 @@ function countDown() {
 
 function resetGame() {
     clockElement.html('');
+    questionsDiv.html('');
+    answersDiv.html('');
     (playButton.html('Play again')).show();
     timeLeft = 5;
     
@@ -74,13 +76,15 @@ function showQuestions(){
     for(i = 0; i < myQuestions.length; i++){
         questionsDiv.append(myQuestions[i].question);
         console.log('question - ' + myQuestions[i].question)
-
         for (j = 0; j < myQuestions[i].answers.length; j++) {
-        	choicesDiv.append(myQuestions[i].answers[j] + '  ');
-        	console.log('answers - ' + myQuestions[i].answers[j])
+            let choiceButton = $("<button>");
+            choiceButton.text(myQuestions[i].answers[j]);
+            choiceButton.attr('data-id', j);
+            choiceButton.attr("type", "radio");
+            choiceButton.addClass('choice-button');
+            answersDiv.append(choiceButton);
         }
-        
     }
-    
-    
 }
+
+
