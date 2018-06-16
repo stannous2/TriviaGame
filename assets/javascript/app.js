@@ -1,15 +1,27 @@
 // create an array to hold all questions and answers
 let myQuestions = [{
-    question: "What is the population in millions of state Ohio?",
+    question: "What is the population of Ohio?",
     answers: ["2", "10", "35"],
     correct: 1
 }, {
-    question: "What is the population in millions of state New Jersey?",
+    question: "What is the population of New Jersey?",
     answers: ["10", "25", "5"],
     correct: 0
 }, {
-    question: "What is the population in millions of state Texas?",
-    answers: ["2", "10", "25", "40"],
+    question: "What is the population of Texas?",
+    answers: ["2", "25", "40"],
+    correct: 1
+}, {
+    question: "What is the population of California?",
+    answers: ["2", "10", "40"],
+    correct: 2
+}, {
+    question: "What is the population of Nevada?",
+    answers: ["2", "10", "25"],
+    correct: 0
+}, {
+    question: "What is the population of Oregon?",
+    answers: ["10", "25", "40"],
     correct: 3
 }];
 
