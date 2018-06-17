@@ -1,28 +1,34 @@
 // create an array to hold all questions and answers
 let myQuestions = [{
-    question: "What is the population of Ohio?",
+    question: "What is the population (in millions) of Ohio?",
     answers: ["2", "10", "35"],
-    correct: 1
+    correct: 1,
+    image: "assets/images/pic1.jpg"
 }, {
-    question: "What is the population of New Jersey?",
+    question: "What is the population (in millions) of New Jersey?",
     answers: ["10", "25", "5"],
-    correct: 0
+    correct: 0,
+    image: "assets/images/pic2.jpg"
 }, {
-    question: "What is the population of Texas?",
+    question: "What is the population (in millions) of Texas?",
     answers: ["2", "25", "40"],
-    correct: 1
+    correct: 1,
+    image: "assets/images/pic3.jpg"
 }, {
-    question: "What is the population of California?",
+    question: "What is the population (in millions) of California?",
     answers: ["2", "10", "40"],
-    correct: 2
+    correct: 2,
+    image: "assets/images/pic4.jpg"
 }, {
-    question: "What is the population of Nevada?",
+    question: "What is the population (in millions) of Nevada?",
     answers: ["2", "10", "25"],
-    correct: 0
+    correct: 0,
+    image: "assets/images/pic5.jpg"
 }, {
-    question: "What is the population of Oregon?",
+    question: "What is the population (in millions) of Oregon?",
     answers: ["10", "25", "40"],
-    correct: 3
+    correct: 3,
+    image: "assets/images/pic6.jpg"
 }];
 
 let timeLeft = 30;
@@ -38,14 +44,8 @@ let randomQuestion = '';
 let rightCount = 0
 let wrongCount = 0;;
 
-
-
 startGame();
-// correctAnswerDiv.append('Correct Answers: ' + rightCount);
-// incorrectAnswerDiv.append('Incorrect Answers: ' + wrongCount);
 evaluateAnswers();
-
-
 
 function getRandomQuestion() {
     randomQuestion = myQuestions[Math.floor(Math.random() * myQuestions.length)];
@@ -67,7 +67,6 @@ function resetBoard() {
     clockElement.html('');
     questionsDiv.html('');
     answersDiv.html('');
-    //randomQuestion = '';
     getRandomQuestion();
 }
 
@@ -117,11 +116,5 @@ function evaluateAnswers() {
         questionsDiv.html('');
         answersDiv.html('');
         showQuestions();
-        //resetBoard();
-
     })
-}
-
-function showResults() {
-
 }
